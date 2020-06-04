@@ -8,10 +8,12 @@ const TasksContextProvider = (props) => {
     {
       task: "Learn hooks",
       id: uuid(),
+      isCompleted: false,
     },
     {
       task: "Learn context",
       id: uuid(),
+      isCompleted: false,
     },
   ]);
   return (
