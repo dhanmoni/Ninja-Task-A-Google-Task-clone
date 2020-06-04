@@ -1,0 +1,36 @@
+.tasks-container {
+  height: calc(100vh - 14rem);
+  background-color: white;
+  padding: 2rem 0;
+}
+
+.add-task-button {
+  width: 90%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 1rem;
+  margin: 0 auto;
+  color: #717579;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+.add-task-button:hover {
+  background-color: #f1f3f4;
+}
+.add-task-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-task-button span svg {
+  color: #4285f4;
+  padding: 0 1rem;
+  font-size: 3rem;
+}
