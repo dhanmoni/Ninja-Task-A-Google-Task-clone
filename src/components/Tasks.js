@@ -14,9 +14,7 @@ const Tasks = () => {
           dispatch({ type: "ADD_TASK", task: "" });
           setTimeout(() => {
             let ul = document.getElementsByClassName("task-list");
-            console.log(ul);
             let child = ul[0].childNodes[0];
-            console.log(child);
             child.childNodes[1].childNodes[0].focus();
           }, 500);
           // taskInput.current.focus();
@@ -29,7 +27,9 @@ const Tasks = () => {
       </div>
       <ul className="task-list">
         {tasks.map((task) => {
-          return <SingleTask task={task} key={task.id} />;
+          if (task.isCompleted === false) {
+            return <SingleTask task={task} key={task.id} />;
+          }
         })}
       </ul>
     </div>
