@@ -1,5 +1,5 @@
 .footer-head {
-  height: 5rem;
+  height: 10%;
   width: 100%;
   background-color: white;
   border-top: 3px solid #f1f3f4;
@@ -13,23 +13,30 @@
 }
 .footer {
   transition: all 200ms ease;
-  z-index: 2000;
-  bottom: 0;
+  z-index: 200000;
+  position: relative;
   width: 100%;
   background-color: white;
+  margin-top: auto;
+  bottom: 0;
 }
 .expanded-footer {
-  margin-top: -40vh;
+  margin-top: -20%;
   transition: all 200ms ease;
   z-index: 2000;
+  position: relative;
   width: 100%;
+  height: 100%;
   background-color: white;
+  bottom: 0;
+  /* background-color: goldenrod;
+  padding-bottom: 40vh; */
 }
 
 .text {
-  font-size: 2rem;
+  font-size: 1rem;
   display: flex;
-  margin: 0 2rem;
+  margin: 0 1rem;
   color: #717579;
   font-family: "Poppins", sans-serif;
 }
@@ -42,7 +49,7 @@
   margin: 0 auto;
   padding: 0;
   margin-top: 20px;
-  background-color: white;
+  height: auto;
 }
 .completed-tasks li {
   width: 90%;
@@ -51,7 +58,6 @@
   justify-content: center;
   background-color: white;
   text-decoration: none;
-  padding: 1rem;
   border-bottom: 2px solid #f1f3f4;
   box-shadow: none;
   z-index: 0;
@@ -62,7 +68,7 @@
   width: 80%;
   outline: none;
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   color: #717579;
   box-shadow: none;
   border: none;
@@ -79,7 +85,7 @@
 .done_svg {
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.8rem;
   color: #4285f4;
   transition: all 300ms ease;
 }
@@ -87,7 +93,15 @@
 .done_svg:hover {
   background-color: #71757920;
   border-radius: 50%;
-  padding: 1rem;
+  padding: 0.8rem;
   color: #4285f4;
+  cursor: pointer;
+}
+.delete_task {
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  color: #717579;
   cursor: pointer;
 }

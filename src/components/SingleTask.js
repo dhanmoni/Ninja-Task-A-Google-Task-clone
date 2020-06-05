@@ -6,6 +6,7 @@ import { Input } from "@material-ui/core";
 const SingleTask = ({ task }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const { tasks, dispatch } = useContext(TasksContext);
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -14,7 +15,10 @@ const SingleTask = ({ task }) => {
     setIsHovered(false);
   };
   const handleComplete = () => {
-    dispatch({ type: "TOGGLE_COMPLETE", id: task.id });
+    setIsVisible(!isVisible);
+    setTimeout(() => {
+      dispatch({ type: "TOGGLE_COMPLETE", id: task.id });
+    }, 300);
   };
   const handleEnter = (e) => {
     if (e.keyCode === 13) {
@@ -24,7 +28,7 @@ const SingleTask = ({ task }) => {
     }
   };
   return (
-    <li key={task.id}>
+    <li key={task.id} className={isVisible ? "visible" : "invisible"}>
       <span
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

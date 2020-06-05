@@ -13,6 +13,8 @@ export const TasksReducer = (state, action) => {
       return state.map((task) =>
         task.id === action.id ? { ...task, task: action.task } : task
       );
+    case "REMOVE_TASK":
+      return state.filter((task) => task.id !== action.id);
     default:
       return state;
   }
