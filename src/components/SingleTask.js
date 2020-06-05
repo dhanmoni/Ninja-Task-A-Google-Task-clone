@@ -17,6 +17,9 @@ const SingleTask = ({ task }) => {
   const handleComplete = () => {
     setIsVisible(!isVisible);
     setTimeout(() => {
+      if (!task.task) {
+        dispatch({ type: "REMOVE_TASK", id: task.id });
+      }
       dispatch({ type: "TOGGLE_COMPLETE", id: task.id });
     }, 300);
   };
