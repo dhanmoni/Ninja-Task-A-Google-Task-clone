@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <div className={showFooter ? "expanded-footer" : "footer"}>
       <div className="footer-head" onClick={() => setShowFooter(!showFooter)}>
-        <span className="text">Completed ({completed})</span>
+        <span className="completed">Completed ({completed})</span>
         <span className="dropdown-icon">
           {showFooter ? (
             <KeyboardArrowDown fontSize="large" />

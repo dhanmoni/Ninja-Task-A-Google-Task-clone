@@ -2,7 +2,7 @@
   height: 10%;
   width: 100%;
   background-color: white;
-  border-top: 3px solid #f1f3f4;
+  border-top: 2px solid #f1f3f4;
   padding: 0;
   margin: 0;
   display: flex;
@@ -33,11 +33,11 @@
   padding-bottom: 40vh; */
 }
 
-.text {
-  font-size: 1rem;
+.completed {
+  font-size: var(--header-size);
   display: flex;
   margin: 0 1rem;
-  color: #717579;
+  color: var(--text-color);
   font-family: "Poppins", sans-serif;
 }
 .completed-tasks {
@@ -68,8 +68,8 @@
   width: 80%;
   outline: none;
   font-family: "Roboto", sans-serif;
-  font-size: 0.8rem;
-  color: #717579;
+  font-size: var(--text-size);
+  color: var(--text-color);
   box-shadow: none;
   border: none;
 }
@@ -86,7 +86,7 @@
   align-items: center;
   justify-content: center;
   padding: 0.8rem;
-  color: #4285f4;
+  color: var(--icon-color);
   transition: all 300ms ease;
 }
 
@@ -94,7 +94,7 @@
   background-color: #71757920;
   border-radius: 50%;
   padding: 0.8rem;
-  color: #4285f4;
+  color: var(--icon-color);
   cursor: pointer;
 }
 .delete_task {
@@ -102,6 +102,6 @@
   align-items: center;
   justify-content: center;
   padding: 0.8rem;
-  color: #717579;
+  color: var(--text-color);
   cursor: pointer;
 }
