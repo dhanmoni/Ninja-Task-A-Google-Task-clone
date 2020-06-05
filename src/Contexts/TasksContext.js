@@ -1,21 +1,15 @@
-import React, { useReducer, createContext } from "react";
+import React, { useReducer, createContext, useEffect } from "react";
 import { TasksReducer } from "../Reducers/TasksReducer";
-import { v4 as uuid } from "uuid";
 
 export const TasksContext = createContext();
 const TasksContextProvider = (props) => {
-  const [tasks, dispatch] = useReducer(TasksReducer, [
-    {
-      task: "Learn hooks",
-      id: uuid(),
-      isCompleted: false,
-    },
-    {
-      task: "Learn context",
-      id: uuid(),
-      isCompleted: false,
-    },
-  ]);
+  const [tasks, dispatch] = useReducer(TasksReducer, [], () => {
+    const localData = localStorage.getItem("tasks");
+    return localData ? JSON.parse(localData) : [];
+  });
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
   return (
     <TasksContext.Provider value={{ tasks, dispatch }}>
       {props.children}
