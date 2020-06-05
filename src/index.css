@@ -8,7 +8,8 @@ body {
 :root {
   --text-color: #717579;
   --icon-color: #4285f4;
-  --header-size: 1rem;
+  --header-size: 1.5rem;
+  --main-text-size: 1rem;
   --text-size: 0.8rem;
 }
 * {

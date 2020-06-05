@@ -16,7 +16,7 @@
   margin: 0 auto;
   color: var(--text-color);
   font-family: "Poppins", sans-serif;
-  font-size: var(--text-size);
+  font-size: var(--main-text-size);
   cursor: pointer;
   border-radius: 1rem;
   transition: all 0.3s ease;

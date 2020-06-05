@@ -4,7 +4,7 @@ import "./Styles/Header.css";
 const Header = () => {
   return (
     <div className="navBar">
-      <span>TASKS</span>
+      <span>Ninja Task</span>
     </div>
   );
 };
